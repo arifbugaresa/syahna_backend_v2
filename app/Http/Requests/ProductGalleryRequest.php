@@ -2,6 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\ProductGalleryRequest;
+use App\Product;
+use App\ProductGallery;
 use Illuminate\Foundation\Http\FormRequest;
 
 class ProductGalleryRequest extends FormRequest
@@ -24,7 +27,7 @@ class ProductGalleryRequest extends FormRequest
     public function rules()
     {
         return [
-            'product_id' => 'required|integer|exist:product,id',
+            'product_id' => 'required|integer',    
             'photo' => 'required|image', 
             'is_default' => 'boolean'
         ]; 

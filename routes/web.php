@@ -18,3 +18,4 @@ Route::get('/', 'DashboardController@index')->name('dashboard');
 Auth::routes();
 
 Route::resource('products','ProductController');
+Route::resource('product-galleries','ProductGalleryController');
